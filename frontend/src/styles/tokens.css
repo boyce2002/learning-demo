@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --night-950: #101936;
+  --night-900: #182346;
+  --night-800: #212d54;
+  --night-700: #2e3c61;
+  --paper: #fbfbff;
+  --paper-mist: #f1f3fc;
+  --paper-violet: #f2efff;
+  --ink-900: #24304c;
+  --ink-600: #52627e;
+  --on-night: #f6f7ff;
+  --on-night-muted: #c4cee5;
+  --violet-650: #6d4fcc;
+  --violet-750: #5639b4;
+  --violet-glow: #bea9ff;
+  --star-gold: #ffd57c;
+  --success-ink: #247251;
+  --error-ink: #a93140;
+  --radius-card: 24px;
+  --radius-control: 14px;
+  --shadow-card: 0 24px 64px rgb(3 7 22 / 22%);
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--night-950);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 84% 0%, rgb(109 79 204 / 24%), transparent 42%),
+    radial-gradient(ellipse at 15% 86%, rgb(40 83 157 / 19%), transparent 42%),
+    var(--night-950);
+  color: var(--on-night);
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--star-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

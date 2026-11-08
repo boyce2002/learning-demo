@@ -1,0 +1,129 @@
+[
+  {
+    "key": "apple_browning",
+    "category": "生活科学",
+    "title": "为什么切开的苹果会慢慢变褐色？",
+    "question": "最常见的主要原因是什么？",
+    "estimated_minutes": 5,
+    "options": [
+      {"key": "a", "label": "切开后水分慢慢流走"},
+      {"key": "b", "label": "一些物质在酶的参与下与氧气反应"},
+      {"key": "c", "label": "周围空气把苹果加热了"}
+    ],
+    "correct_option": "b",
+    "explanation": "苹果被切开后，细胞结构受到破坏，一些物质会在酶的参与下与氧气反应，逐渐形成褐色物质。这是常见的酶促褐变现象。",
+    "takeaway": "原来苹果变色和酶促氧化有关。",
+    "reflection_prompt": "如果想让苹果慢一点变色，你会试什么方法？",
+    "feedback_correct": "你抓住了关键线索！你发现了空气和苹果内部物质之间的联系。",
+    "feedback_try_again": "你的猜想提供了一个起点。现在我们知道，酶促氧化是切开苹果变褐色的常见原因。"
+  },
+  {
+    "key": "active_recall",
+    "category": "学习方法",
+    "title": "明明看过了，怎样检验自己是否记住？",
+    "question": "哪一种做法更能检验真实记忆？",
+    "estimated_minutes": 4,
+    "options": [
+      {"key": "a", "label": "再看一遍标题"},
+      {"key": "b", "label": "合上资料尝试复述"},
+      {"key": "c", "label": "只看高亮标记"}
+    ],
+    "correct_option": "b",
+    "explanation": "合上资料再复述，需要主动从记忆里提取信息。这个过程比单纯重看更容易暴露理解和记忆的缺口，也能帮助你决定接下来该复习什么。",
+    "takeaway": "主动提取能更真实地检验自己是否记住。",
+    "reflection_prompt": "你想合上资料复述哪个知识点？",
+    "feedback_correct": "你发现了检验记忆的关键：把知识从脑海里主动找出来。",
+    "feedback_try_again": "重看会带来熟悉感，但主动复述更能发现自己是否真的记住。"
+  },
+  {
+    "key": "shadow_length",
+    "category": "生活观察",
+    "title": "为什么杆子的影子一天里会变长变短？",
+    "question": "影子长度变化的主要原因是什么？",
+    "estimated_minutes": 4,
+    "options": [
+      {"key": "a", "label": "杆子在慢慢伸缩"},
+      {"key": "b", "label": "太阳在天空中的高度角变化"},
+      {"key": "c", "label": "太阳和杆子的距离变化很大"}
+    ],
+    "correct_option": "b",
+    "explanation": "太阳在天空中的高度角会随时间改变。同一根杆子在太阳较低时投下较长的影子，太阳升高后影子会变短；下午太阳降低，影子又会变长。",
+    "takeaway": "同一物体的影长会随太阳高度角改变。",
+    "reflection_prompt": "你想在哪两个时刻比较同一根杆子的影子？",
+    "feedback_correct": "你抓住了光线角度变化这条关键线索。",
+    "feedback_try_again": "杆子没有明显伸缩，真正改变的是太阳光照射地面的角度。"
+  },
+  {
+    "key": "window_condensation",
+    "category": "生活科学",
+    "title": "为什么冬天对着玻璃哈气，会出现一层雾？",
+    "question": "玻璃上的雾主要从哪里来？",
+    "estimated_minutes": 4,
+    "options": [
+      {"key": "a", "label": "玻璃自己释放了水"},
+      {"key": "b", "label": "温暖湿润的气体遇冷凝结成小水滴"},
+      {"key": "c", "label": "玻璃表面变成了白色"}
+    ],
+    "correct_option": "b",
+    "explanation": "呼出的气体温暖且含有水蒸气。水蒸气碰到较冷的玻璃后会凝结成许多微小水滴，散射光线，于是看起来像一层白雾。",
+    "takeaway": "玻璃雾气是水蒸气遇冷凝结形成的小水滴。",
+    "reflection_prompt": "生活中你还在哪里见过类似的凝结现象？",
+    "feedback_correct": "你把温度变化和水的状态变化联系起来了。",
+    "feedback_try_again": "这层雾不是玻璃变白，而是水蒸气遇冷后形成了小水滴。"
+  },
+  {
+    "key": "spaced_practice",
+    "category": "学习方法",
+    "title": "哪种安排更适合长期记忆？",
+    "question": "面对同样的学习内容，哪种安排通常更有效？",
+    "estimated_minutes": 4,
+    "options": [
+      {"key": "a", "label": "一天集中背很多遍"},
+      {"key": "b", "label": "分隔几天再复习"},
+      {"key": "c", "label": "只在考试前看一次"}
+    ],
+    "correct_option": "b",
+    "explanation": "把复习分散到不同时间，通常比一次集中重复更有助于长期记忆。每次间隔后的重新提取都在巩固线索，不过具体间隔仍要结合内容和个人情况调整。",
+    "takeaway": "有间隔的复习通常更有利于长期保持。",
+    "reflection_prompt": "你想给哪项内容安排下一次间隔复习？",
+    "feedback_correct": "你注意到了学习安排里的时间间隔。",
+    "feedback_try_again": "集中重复可能短期熟悉，分隔几天重新提取通常更利于长期记忆。"
+  },
+  {
+    "key": "light_and_sound",
+    "category": "科学观察",
+    "title": "为什么我们通常先看到闪电，再听到雷声？",
+    "question": "造成先后顺序的主要原因是什么？",
+    "estimated_minutes": 3,
+    "options": [
+      {"key": "a", "label": "雷声比较晚才产生"},
+      {"key": "b", "label": "光的传播速度比声音快得多"},
+      {"key": "c", "label": "眼睛比耳朵更努力"}
+    ],
+    "correct_option": "b",
+    "explanation": "闪电和雷声几乎同时产生，但光在空气中的传播速度远高于声音。距离越远，声音到达所需的时间越明显，所以我们常常先看到闪光。",
+    "takeaway": "传播速度差让闪电先被看见、雷声后被听见。",
+    "reflection_prompt": "还有哪些现象能体现不同传播速度带来的时间差？",
+    "feedback_correct": "你找到了光和声音传播速度的关键差异。",
+    "feedback_try_again": "先后差主要不是感官努力程度，而是光比声音传播得快得多。"
+  },
+  {
+    "key": "water_reflection",
+    "category": "生活科学",
+    "title": "为什么有时人能看到水面上的倒影？",
+    "question": "水面形成倒影的主要原因是什么？",
+    "estimated_minutes": 4,
+    "options": [
+      {"key": "a", "label": "水面自己发出了光"},
+      {"key": "b", "label": "一部分光在较平静的水面上发生反射"},
+      {"key": "c", "label": "水把物体复制了一份"}
+    ],
+    "correct_option": "b",
+    "explanation": "来自物体的部分光线到达水面后发生反射，再进入我们的眼睛，于是形成倒影。水面越平静，反射方向越整齐，看到的影像通常也越清晰。",
+    "takeaway": "较平静水面的光反射让我们看见倒影。",
+    "reflection_prompt": "什么情况会让水面倒影变得模糊？",
+    "feedback_correct": "你发现了水面和光线之间的反射关系。",
+    "feedback_try_again": "水面并没有复制物体；进入眼睛的反射光让我们看到了影像。"
+  }
+]
+

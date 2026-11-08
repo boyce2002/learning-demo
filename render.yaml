@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: sparklab-public-demo
+    runtime: docker
+    plan: 0.5c-512mb
+    healthCheckPath: /api/health
+    envVars:
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PUBLIC_DEMO_ENABLED
+        value: "true"
+      - key: VISITOR_RESET_ENABLED
+        value: "true"
+      - key: DEMO_MODE
+        value: "true"
+      - key: DEMO_RESET_ENABLED
+        value: "false"
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: DATABASE_PATH
+        value: /data/sparklab.sqlite3
+      - key: FRONTEND_DIST_PATH
+        value: /app/frontend/dist
+      - key: APP_TIMEZONE
+        value: Asia/Shanghai
+      - key: WRITE_RATE_LIMIT_PER_MINUTE
+        value: "60"
+      - key: RESET_RATE_LIMIT_PER_HOUR
+        value: "3"
+    disk:
+      name: sparklab-data
+      mountPath: /data
+      sizeGB: 1
