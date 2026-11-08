@@ -35,6 +35,7 @@ export interface TodayResponse {
   reference_date: string;
   timezone: string;
   is_demo_mode: boolean;
+  is_ephemeral_storage: boolean;
   demo_reset_enabled: boolean;
   user_id: "anonymous_visitor";
   phase: Phase;

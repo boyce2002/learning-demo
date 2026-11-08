@@ -24,6 +24,7 @@ class Settings:
     demo_reset_enabled: bool = False
     public_demo_enabled: bool = False
     visitor_reset_enabled: bool = False
+    ephemeral_storage: bool = False
     session_secret: str = ""
     session_cookie_name: str = "sparklab_session"
     session_max_age_seconds: int = 604800
@@ -66,6 +67,7 @@ def load_settings() -> Settings:
         demo_reset_enabled=_as_bool(os.getenv("DEMO_RESET_ENABLED")),
         public_demo_enabled=public_demo_enabled,
         visitor_reset_enabled=_as_bool(os.getenv("VISITOR_RESET_ENABLED")),
+        ephemeral_storage=_as_bool(os.getenv("EPHEMERAL_STORAGE")),
         session_secret=session_secret,
         session_cookie_name=os.getenv("SESSION_COOKIE_NAME", "sparklab_session"),
         session_max_age_seconds=int(os.getenv("SESSION_MAX_AGE_SECONDS", "604800")),

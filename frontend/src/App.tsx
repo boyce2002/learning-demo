@@ -261,7 +261,10 @@ export default function App() {
   }
 
   return (
-    <AppShell isDemoMode={today.is_demo_mode}>
+    <AppShell
+      isDemoMode={today.is_demo_mode}
+      isEphemeralStorage={today.is_ephemeral_storage}
+    >
       <DailyHeader referenceDate={today.reference_date} />
       {today.is_demo_mode && demoBaseDate && (
         <DemoToolbar

@@ -30,7 +30,7 @@ def public_settings(tmp_path, **overrides):
 
 
 def test_two_browser_sessions_are_fully_isolated(tmp_path):
-    application = create_app(public_settings(tmp_path))
+    application = create_app(public_settings(tmp_path, ephemeral_storage=True))
     with TestClient(application) as browser_a, TestClient(application) as browser_b:
         complete_for_date(browser_a, "2026-11-05", "A 浏览器留下的独立学习反思。")
 
@@ -42,6 +42,7 @@ def test_two_browser_sessions_are_fully_isolated(tmp_path):
         b_history = browser_b.get("/api/history?demo_date=2026-11-05").json()
 
         assert a_today["phase"] == "completed"
+        assert a_today["is_ephemeral_storage"] is True
         assert b_today["phase"] == "not_started"
         assert a_progress["total_completed_days"] == 1
         assert b_progress["total_completed_days"] == 0

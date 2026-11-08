@@ -4,9 +4,14 @@ import { copy } from "../content/copy";
 interface AppShellProps {
   children: ReactNode;
   isDemoMode?: boolean;
+  isEphemeralStorage?: boolean;
 }
 
-export function AppShell({ children, isDemoMode = false }: AppShellProps) {
+export function AppShell({
+  children,
+  isDemoMode = false,
+  isEphemeralStorage = false,
+}: AppShellProps) {
   return (
     <div className="app-shell">
       <div className="star-field" aria-hidden="true" />
@@ -26,6 +31,9 @@ export function AppShell({ children, isDemoMode = false }: AppShellProps) {
       {isDemoMode && (
         <div className="demo-mode-notice" role="status">
           演示体验｜题目为人工预置；学习日期和成长记录可模拟，不代表真实学生数据。
+          {isEphemeralStorage && (
+            <> 免费服务使用临时存储；休眠、重启或重新部署后记录可能清空。</>
+          )}
         </div>
       )}
       {children}

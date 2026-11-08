@@ -77,6 +77,7 @@ class SparkLabService:
             "reference_date": date_text,
             "timezone": self.settings.app_timezone,
             "is_demo_mode": self.settings.demo_mode,
+            "is_ephemeral_storage": self.settings.ephemeral_storage,
             "demo_reset_enabled": (
                 self.settings.visitor_reset_enabled
                 if self.settings.public_demo_enabled

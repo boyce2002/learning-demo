@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
 const baseUrl = process.env.SPARKLAB_URL || "http://127.0.0.1:8766";
+const expectEphemeralNotice = process.env.EXPECT_EPHEMERAL_NOTICE === "true";
 const chromeCandidates = [
   process.env.CHROME_PATH,
   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
@@ -183,6 +184,7 @@ try {
 
   const browserBProgress = await currentProgress(browserB.client);
   const viewport = await browserA.client.evaluate(`({ innerWidth: window.innerWidth, scrollWidth: document.documentElement.scrollWidth })`);
+  const ephemeralNotice = await browserA.client.evaluate("document.body.innerText.includes('临时存储') && document.body.innerText.includes('记录可能清空')");
   const consoleErrors = browserA.client.events.filter((event) => event.method === "Runtime.consoleAPICalled" && event.params.type === "error").length;
   const pageExceptions = browserA.client.events.filter((event) => event.method === "Runtime.exceptionThrown").length;
 
@@ -195,6 +197,7 @@ try {
     focusReturned,
     browserBTotal: browserBProgress.total_completed_days,
     viewport,
+    ephemeralNotice,
     consoleErrors,
     pageExceptions,
   };
@@ -210,6 +213,7 @@ try {
     && browserBProgress.total_completed_days === 0
     && viewport.innerWidth === 375
     && viewport.scrollWidth <= 375
+    && (!expectEphemeralNotice || ephemeralNotice)
     && consoleErrors === 0
     && pageExceptions === 0;
   console.log(JSON.stringify({ passed, ...report }));
