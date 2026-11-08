@@ -162,9 +162,9 @@ npm.cmd exec tsc -- -b
 npm.cmd run build
 ```
 
-2026-11-07 Step 5 本轮实际回归结果：后端 `25 passed in 21.35s`；独立 TypeScript `tsc -b` 通过；Vite 6.4.5 production build 通过（42 modules transformed，968ms）；`npm ci` 安装 70 个包、审计 71 个包，显式 `npm audit` 为 0 vulnerabilities。生产安全模式的 `/api/health` 返回 200，SQLite 两张表成功初始化，`demo_date` 返回 403，reset 返回 404。系统 Chrome headless 使用真实 DemoToolbar 跑过错误猜想到完成、刷新恢复、连续三天与漏学重置、历史倒序/过去视角、手记焦点循环与 Escape、历史慢请求竞态、完成请求断网保留反思并重试；375px 根节点 `scrollWidth=375`。浏览器证据见 `docs/sparklab-final-journal-375.png`，完整人工检查表见 `docs/11_最终交付验收与人工检查清单.md`。
+2026-11-07 Step 5 本轮实际回归结果：后端 `25 passed in 21.35s`；独立 TypeScript `tsc -b` 通过；Vite 6.4.5 production build 通过（42 modules transformed，968ms）；`npm ci` 安装 70 个包、审计 71 个包，显式 `npm audit` 为 0 vulnerabilities。生产安全模式的 `/api/health` 返回 200，SQLite 两张表成功初始化，`demo_date` 返回 403，reset 返回 404。系统 Chrome headless 使用真实 DemoToolbar 跑过错误猜想到完成、刷新恢复、连续三天与漏学重置、历史倒序/过去视角、手记焦点循环与 Escape、历史慢请求竞态、完成请求断网保留反思并重试；375px 根节点 `scrollWidth=375`。
 
-2026-11-08 Step 6 本轮最终结果：`33 passed in 31.59s`；`npm ci` 安装 70 包且 0 漏洞；独立 `tsc -b` 通过；Vite production build 42 modules、2.13s；`npm audit` 各级均为 0。Docker 镜像真实构建成功，容器写入后删除/重建容器并复用测试卷，完成状态和反思成功恢复。两个独立无头 Chrome 公网形态 E2E 通过：A 为 3/3 后漏学 0/3，B 始终 0；刷新、手记 3 条、dialog 焦点/Escape、375px、控制台均通过。详见 `docs/13_公网Demo部署与独立访客验收报告.md`。
+2026-11-08 Step 6 本轮最终结果：`33 passed in 31.59s`；`npm ci` 安装 70 包且 0 漏洞；独立 `tsc -b` 通过；Vite production build 42 modules、2.13s；`npm audit` 各级均为 0。Docker 镜像真实构建成功，容器写入后删除/重建容器并复用测试卷，完成状态和反思成功恢复。两个独立无头 Chrome 公网形态 E2E 通过：A 为 3/3 后漏学 0/3，B 始终 0；刷新、手记 3 条、dialog 焦点/Escape、375px、控制台均通过。
 
 仍需人工复核：真实手机软键盘、屏幕阅读器朗读顺序、桌面浏览器逐键主流程，以及正式录屏文件。自动化结果不能替代这些人工体验检查，也不代表项目已有公开部署地址。
 
@@ -186,7 +186,7 @@ tar.exe -tf ..\SparkLab_v0.2-source.zip
 
 检查压缩包清单时，应保留源码、测试、`package.json`、`package-lock.json`、`requirements.txt`、README、docs 与必要截图；不得出现 `.venv`、`node_modules`、`frontend/dist`、`backend/.pytest-tmp`、`*.sqlite3`、`.env`、缓存或真实密钥。不要直接“右键压缩”整个工作区。
 
-若尚未初始化 Git，使用 `docs/11_最终交付验收与人工检查清单.md` 中经过本轮实测的 PowerShell 暂存目录方案；它会显式排除依赖、缓存、运行数据和 `delivery/`，并在压缩后解压复核。
+若尚未初始化 Git，应使用独立暂存目录打包，显式排除依赖、缓存、运行数据和 `delivery/`，并在压缩后解压复核。
 
 ## API
 
@@ -211,5 +211,5 @@ Demo 模式下，上述日期相关接口可附 `?demo_date=YYYY-MM-DD`；可模
 - 错误猜想会明确说明不同，但同样能完成并点亮星星。
 - 网络失败不伪成功；前端保留选择/反思供重试，刷新从数据库恢复。
 
-更完整的取舍见 [设计说明](docs/design-rationale.md)，简版录屏步骤见 [演示脚本](docs/demo-script.md)，正式 90 秒镜头与解说见 [演示分镜](docs/10_正式演示分镜与解说词.md)。
+更完整的取舍见 [设计说明](docs/design-rationale.md)，录屏步骤见 [演示脚本](docs/demo-script.md)，评审摘要见 [提交版产品说明](docs/12_简短产品设计说明_提交版.md)，上线后体验步骤见 [在线 Demo 指南](docs/14_在线Demo评审体验指南.md)。
 

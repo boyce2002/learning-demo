@@ -20,3 +20,12 @@ chrome-*-profile*/
 delivery/
 .render/
 .DS_Store
+
+# Internal planning and review documents stay local, not in the public repo.
+/0[0-5]_*.md
+/AGENTS.md
+/docs/*
+!/docs/design-rationale.md
+!/docs/demo-script.md
+!/docs/12_简短产品设计说明_提交版.md
+!/docs/14_在线Demo评审体验指南.md
